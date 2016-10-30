@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/whiteFaded">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/history_date_textsize"
+            android:paddingTop="@dimen/dash_height"
+            android:paddingBottom="@dimen/dash_height"
+            android:paddingRight="@dimen/digitMilli_margins"
+            android:paddingEnd="@dimen/digitMilli_margins"
+            android:paddingStart="@dimen/history_date_paddingLeft"
+            android:paddingLeft="@dimen/history_date_paddingLeft"
+            android:text="Thurs 01 Jan 2015"
+            android:id="@+id/listDate"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/digitMilli_margins"
+        android:id="@+id/relativeLayout"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listTimeWorked"
+            android:textSize="@dimen/PAYRATE_textsize"
+            android:text="06H 20M"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/rate_text"
+            android:text="$126.99"
+            android:layout_marginEnd="@dimen/history_earnings_marginRight"
+            android:layout_marginRight="@dimen/history_earnings_marginRight"
+            android:id="@+id/listEarnings"
+          />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/checkbox"
+            android:layout_marginRight="@dimen/dash_width"
+            android:layout_marginEnd="@dimen/dash_width"
+            android:visibility="gone"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listHourlyRate"
+            android:text="$16.70 Per Hour"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/history_date_textsize"
+            android:layout_below="@+id/listEarnings"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

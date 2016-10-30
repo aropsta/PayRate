@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="enterText"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/areYouSure"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/digitMilli_margins"
+        android:paddingBottom="@dimen/digitMilli_margins" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:paddingLeft="@dimen/reset_dialogListview_paddingLeft"
+        android:paddingEnd="@dimen/reset_dialogListview_paddingLeft"
+        android:paddingStart="@dimen/reset_dialogListview_paddingLeft"
+        android:paddingRight="@dimen/history_date_paddingLeft"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:columnCount="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarStyle"
+        >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnSelectionCANCEL"
+            android:layout_weight="1"
+            android:onClick="resetCancel"
+            android:textSize="@dimen/PAYRATE_textsize"
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/btnResetCancel"
+            />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:onClick="resetOk"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/RESET"
+            android:textSize="@dimen/PAYRATE_textsize"
+            android:id="@+id/btnResetOK" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

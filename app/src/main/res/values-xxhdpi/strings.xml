@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">00.00</string>
+    <string name="label_PAYRATE">PAYRATE</string>
+    <string name="currencySign">$</string>
+    <string name="app_name">PayRate</string>
+    <string name="menu_exit">Exit</string>
+    <string name="label_PERHOUR">per/hour</string>
+    <string name="btnSelectionOK">OK</string>
+    <string name="btnSelectionCANCEL">Cancel</string>
+    <string name="enterHourlyRatePrompt">Enter An Hourly Rate</string>
+    <string name="btnHistory">HISTORY</string>
+    <string name="btnStart">START</string>
+    <string name="btnSave">SAVE</string>
+    <string name="btnPause">PAUSE</string>
+    <string name="clockFullPrompt">ERROR, CLOCK IS FULL, PLEASE RESET</string>
+    <string name="maxReachedPrompt">CLOCK IS FULL!</string>
+    <string name="filledAtPrompt">Filled at:\n </string>
+    <string name="clockFullPromptDialog">clock_full_prompt_dialog</string>
+    <string name="enterTextDialog">enter_text_dialog</string>
+
+    <string name ="hours" >hours Worked</string>
+    <string name ="minutes" >minutes Worked</string>
+    <string name ="seconds" >seconds Worked</string>
+    <string name ="centiseconds" >milliSeconds Worked</string>
+
+    <string name ="h" >h</string>
+    <string name ="m" >m</string>
+    <string name ="s" >s</string>
+
+    <string name="nothingToSave">Nothing to Save!</string>
+    <string name="negativeNumberEntered">You Just Entered a Negative Number</string>
+    <string name="maxIs99Mill">Sorry but this caps at 99 million</string>
+    <string name="youEnterNothing">You Didn\'t Enter Anything !</string>
+    <string name="RESET">CLEAR</string>
+    <string name="resetClock">Reset Clock</string>
+    <string name="resetEarnings">Reset Earnings</string>
+    <string name="areYouSure">Are You Sure?</string>
+    <string name="pauseClockPrompt">Pause Clock First!</string>
+    <string name="menu_BACK">Back</string>
+    <string name="delete_entries">Delete Entries</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="nothingtodelete">Nothing To Delete!</string>
+    <string name="noHistory">No History To Show</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="saved">Saved</string>
+</resources>

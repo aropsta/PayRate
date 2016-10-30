@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="enterText">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/enterHourlyRatePrompt"
+        android:id="@+id/textView2"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/digitMilli_margins"
+        android:paddingBottom="@dimen/digitMilli_margins"
+        android:paddingLeft="@dimen/payrate_button_height"
+        android:paddingStart="@dimen/payrate_button_height"
+        android:paddingEnd="@dimen/payrate_button_height"
+        android:paddingRight="@dimen/payrate_button_height"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:id="@+id/editText"
+        android:layout_margin="@dimen/digitMilli_margins" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="enterTextOk"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/btnSelectionOK"
+        android:id="@+id/btnOK" />
+
+
+</LinearLayout>

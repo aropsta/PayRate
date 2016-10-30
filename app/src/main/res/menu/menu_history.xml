@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".HistoryActivity">
+
+
+    <item
+        android:title="@string/delete_entries"
+        android:id="@+id/historyMenu_deleteEntries"
+        app:showAsAction="always"
+        android:icon="@drawable/delete_icon"/>
+
+    <item android:title="yolo" />
+
+    </menu>
