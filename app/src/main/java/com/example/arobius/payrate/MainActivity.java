@@ -2,19 +2,12 @@ package com.example.arobius.payrate;
 
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.os.AsyncTaskCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -27,13 +20,15 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Button;
-import android.os.Message;
+
 import java.math.BigDecimal;
 import android.widget.Toast;
+
+import com.example.arobius.payrate.java.databaseAdapter;
+
 import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.Executors;
@@ -144,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
 
             earningsLabel.setText(getString(R.string.currencySign) + " " + b.format(earnings));
             rate.setText(savedInstanceState.getString("rate"));
-            savedInstanceState = null;
             
         }
 

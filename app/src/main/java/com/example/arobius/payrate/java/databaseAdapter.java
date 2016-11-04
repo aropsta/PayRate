@@ -1,4 +1,4 @@
-package com.example.arobius.payrate;
+package com.example.arobius.payrate.java;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,19 +6,17 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.widget.Toast;
+
+import com.example.arobius.payrate.java.historyData;
 
 import java.util.ArrayList;
 
 public class databaseAdapter  {
-    historyDBHelper helper;
-    private static historyDBHelper instance = null;
-    Context context;
+    private static historyDBHelper instance= null;
+    private Context context;
 
     public databaseAdapter(Context context) {
-        helper = historyDBHelper.getInstance(context);
+        historyDBHelper helper = historyDBHelper.getInstance(context);
         this.context = context;
     }
 
@@ -32,8 +30,7 @@ public class databaseAdapter  {
         contentValues.put(historyDBHelper.time2Col, time[2]);contentValues.put(historyDBHelper.time3Col, time[3]);
         contentValues.put(historyDBHelper.rateCol, rate);contentValues.put(historyDBHelper.wageCol, wage);
 
-        long id = d.insert(historyDBHelper.TABLE_NAME, null, contentValues);
-        return id;
+        return d.insert(historyDBHelper.TABLE_NAME, null, contentValues);
     }
 
     public ArrayList <historyData> extractArrayList(){
@@ -87,7 +84,7 @@ public class databaseAdapter  {
 }
 
 
-    static class historyDBHelper extends SQLiteOpenHelper {
+    private static class historyDBHelper extends SQLiteOpenHelper {
         private final static String DATABASE_NAME = "database";
         private final static String TABLE_NAME = "historyTB";
         private final static String UID = "id";
@@ -106,7 +103,7 @@ public class databaseAdapter  {
               rateCol+ " VARCHAR, "+wageCol+" VARCHAR);";
         String DROP_TABLE = "DROP TABLE IF EXISTS "+TABLE_NAME;
 
-        public static historyDBHelper getInstance(Context context) {
+        static historyDBHelper getInstance(Context context) {
             if (instance == null) {
                 instance = new historyDBHelper(context);
             }

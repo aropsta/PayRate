@@ -1,15 +1,9 @@
-package com.example.arobius.payrate;
+package com.example.arobius.payrate.java;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-class historyData implements Parcelable {
+public class historyData implements Parcelable {
 
     private String moneyEarned, hourlyRate;
     private String[] date, timeWorked;
@@ -25,16 +19,16 @@ class historyData implements Parcelable {
 
     private boolean checkbox;
 
-    boolean isChecked() {
+    public boolean isChecked() {
         return checked;
     }
 
-    void setChecked(boolean checked) {
+    public void setChecked(boolean checked) {
         this.checked = checked;
     }
 
 
-    String getMoneyEarned() {
+    public String getMoneyEarned() {
         return moneyEarned;
     }
 
@@ -42,7 +36,7 @@ class historyData implements Parcelable {
         this.moneyEarned = moneyEarned;
     }
 
-    String getHourlyRate() {
+    public String getHourlyRate() {
         return hourlyRate;
     }
 
@@ -50,7 +44,7 @@ class historyData implements Parcelable {
         this.hourlyRate = hourlyRate;
     }
 
-    String[] getDate() {
+    public String[] getDate() {
         return date;
     }
 
@@ -58,7 +52,7 @@ class historyData implements Parcelable {
         this.date = date;
     }
 
-    String[] getTimeWorked() {
+    public String[] getTimeWorked() {
         return timeWorked;
     }
 

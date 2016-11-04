@@ -1,48 +1,29 @@
 package com.example.arobius.payrate;
-//fuck
 
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.arobius.payrate.java.databaseAdapter;
+import com.example.arobius.payrate.java.historyData;
+import com.example.arobius.payrate.java.recyclerAdapter;
 
-public class HistoryActivity extends AppCompatActivity  {
+import java.util.ArrayList;
+
+class HistoryActivity extends AppCompatActivity  {
 
     ArrayList<historyData> arrayList;
     RecyclerView recyclerView;
-    recyclerAdapter recyclerAdapter;
+    com.example.arobius.payrate.java.recyclerAdapter recyclerAdapter;
     LinearLayout bottomBar;
     boolean selectionView = false;
     databaseAdapter helper;
@@ -66,7 +47,6 @@ public class HistoryActivity extends AppCompatActivity  {
         textView = (TextView)findViewById(R.id.noHistory);
         yesButton = (Button) findViewById(R.id.yesButton);
         bottomBar = (LinearLayout) findViewById(R.id.historyBottomBar);
-        //listView = (ListView) findViewById(R.id.historyListView);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
 

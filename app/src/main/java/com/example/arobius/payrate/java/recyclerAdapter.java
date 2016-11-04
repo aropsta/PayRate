@@ -1,9 +1,8 @@
-package com.example.arobius.payrate;
+package com.example.arobius.payrate.java;
 
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,19 +12,20 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.arobius.payrate.R;
 
 import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyViewHolder>{
 
     private LayoutInflater inflater;
-    ArrayList<historyData> arrayList;
-    Button yesButton;
-    Context context;
-    boolean selectionView;
+    private ArrayList<historyData> arrayList;
+    private Button yesButton;
+    private Context context;
+    private boolean selectionView;
 
-    public recyclerAdapter(Context context, ArrayList<historyData> arrayList, boolean selectionView, Button yesButton) {
+   public recyclerAdapter(Context context, ArrayList<historyData> arrayList, boolean selectionView, Button yesButton) {
         inflater = LayoutInflater.from(context);
         this.arrayList = arrayList;
         this.context = context;
