@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.arobius.payrate.clock_fragment">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="@dimen/payrate_button_width"
+        android:layout_height="@dimen/payrate_button_height"
+        android:layout_marginBottom="@dimen/payrate_button_marginBottom"
+        android:background="@drawable/button"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/payrate_button_marginTop"
+        android:id="@+id/payrateBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_PAYRATE"
+            android:textSize="@dimen/PAYRATE_textsize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/lightCream"
+            android:textIsSelectable="false"
+            android:id="@+id/payRateText"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginLeft="@dimen/digitMilli_margins"
+            android:layout_marginStart="@dimen/digitMilli_margins"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dash_margin_LRSE"
+            android:layout_marginRight="@dimen/dash_margin_LRSE"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currencySign"
+                android:id="@+id/payRateCurrency"
+                android:textColor="@color/lightCream"
+                android:textSize="@dimen/rate_text"
+                android:layout_marginRight="@dimen/dash_width"
+                android:layout_marginEnd="@dimen/dash_width"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/zero"
+                android:id="@+id/rate"
+                android:textColor="@color/lightCream"
+                android:textSize="@dimen/rate_text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/label_PERHOUR"
+            android:textColor="@color/lightCream"
+            android:id="@+id/perhourText"
+            android:textSize="@dimen/perhour_textsize"
+            android:textIsSelectable="false"
+            android:layout_marginRight="@dimen/digitMilli_margins"
+            android:layout_marginEnd="@dimen/digitMilli_margins"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_horizontal">
+
+
+        <ImageView
+            android:layout_width="@dimen/digit_width"
+            android:layout_height="@dimen/digit_height"
+            android:contentDescription="@string/hours"
+            android:src="@drawable/digit00"
+            android:id="@+id/hoursImage"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/dash_width"
+            android:layout_height="@dimen/dash_height"
+
+            android:src="@drawable/dash"
+            android:scaleType="center"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginLeft="@dimen/dash_margin_LRSE"
+            android:layout_marginEnd="@dimen/dash_margin_LRSE"
+            android:layout_marginStart="@dimen/dash_margin_LRSE"
+            android:layout_marginRight="@dimen/dash_margin_LRSE"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/digit_width"
+            android:layout_height="@dimen/digit_height"
+            android:contentDescription="@string/minutes"
+            android:src="@drawable/digit00"
+            android:id="@+id/minutesImage" />
+
+        <ImageView
+            android:layout_width="@dimen/dash_width"
+            android:layout_height="@dimen/dash_height"
+            android:src="@drawable/dash"
+            android:scaleType="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dash_margin_LRSE"
+            android:layout_marginEnd="@dimen/dash_margin_LRSE"
+            android:layout_marginStart="@dimen/dash_margin_LRSE"
+            android:layout_marginRight="@dimen/dash_margin_LRSE" />
+
+
+        <ImageView
+            android:layout_width="@dimen/digit_width"
+            android:layout_height="@dimen/digit_height"
+            android:contentDescription="@string/seconds"
+            android:src="@drawable/digit00"
+            android:id="@+id/secondsImage" />
+
+        <ImageView
+            android:layout_width="@dimen/digitMilli_width"
+            android:layout_height="@dimen/digitMilli_height"
+            android:src="@drawable/digit00"
+            android:id="@+id/centiSecondsImage"
+            android:contentDescription="@string/centiseconds"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/digitMilli_margins"
+            android:layout_marginStart="@dimen/digitMilli_margins"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_width="@dimen/earnings_width"
+            android:layout_height="@dimen/earnings_height"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="$ 00.00"
+            android:textColor="@color/lightCream"
+            android:textSize="40sp"
+            android:id="@+id/earningsLabel" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/buttonGrid_width"
+        android:layout_height="@dimen/buttonGrid_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/digitMilli_height">
+
+        <Button
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+
+            android:layout_marginRight="@dimen/payrate_button_height"
+            android:layout_marginEnd="@dimen/payrate_button_height"
+            android:layout_marginBottom="@dimen/payrate_button_height"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+
+            android:id="@+id/startButton"
+            android:textColor="@color/darkCream"
+            android:background="@drawable/button"
+            android:textSize="@dimen/rate_text"
+            android:text="@string/btnStart"
+
+
+            />
+
+        <Button
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/rate_text"
+
+            android:id="@+id/resetButton"
+            android:background="@drawable/button"
+            android:text="@string/RESET"
+            android:textColor="@color/darkCream" />
+
+        <Button
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+
+            android:textSize="@dimen/rate_text"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:id="@+id/saveButton"
+            android:textColor="@color/darkCream"
+            android:text="@string/btnSave"
+            android:background="@drawable/button"
+            />
+
+        <Button
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+
+            android:textSize="@dimen/rate_text"
+
+            android:id="@+id/historyButton"
+            android:textColor="@color/darkCream"
+            android:text="@string/btnHistory"
+            android:background="@drawable/button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

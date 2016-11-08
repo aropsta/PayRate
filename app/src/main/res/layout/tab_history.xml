@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+    android:background="@drawable/history_background"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noHistory"
+        android:textColor="@color/white"
+        android:textSize="@dimen/payrate_button_height"
+        android:id="@+id/noHistory"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/digitMilli_margins"
+        android:layout_gravity="center_horizontal"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:id="@+id/historyListView"
+        android:layout_weight="1"
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/recyclerView">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:columnCount="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarStyle"
+        android:id="@+id/historyBottomBar"
+        android:background="#FFFFFF"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnSelectionCANCEL"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_weight="1"
+            android:onClick="historyBarCancel"
+            android:textSize="@dimen/PAYRATE_textsize"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/confirm"
+            android:enabled="false"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_weight="1"
+            android:onClick="historyBarYes"
+            android:textSize="@dimen/PAYRATE_textsize"
+            android:id="@+id/yesButton"/>
+
+    </LinearLayout>
+</LinearLayout>

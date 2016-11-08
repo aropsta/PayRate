@@ -40,7 +40,6 @@
             android:layout_height="match_parent"
             android:text="@string/btnSelectionCANCEL"
             android:layout_weight="1"
-            android:onClick="resetCancel"
             android:textSize="@dimen/PAYRATE_textsize"
             style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/btnResetCancel"
@@ -48,7 +47,6 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:onClick="resetOk"
             android:layout_weight="1"
             style="?android:attr/buttonBarButtonStyle"
             android:text="@string/RESET"

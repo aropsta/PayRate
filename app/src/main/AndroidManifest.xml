@@ -31,11 +31,6 @@
             android:excludeFromRecents="true"
             android:theme="@style/AppTheme"
             android:uiOptions="splitActionBarWhenNarrow"></activity>
-        <activity
-            android:name=".dialogs"
-            android:excludeFromRecents="true"
-            android:theme="@android:style/Theme.Holo.Light.Dialog"
-            android:windowSoftInputMode="stateVisible"></activity>
     </application>
 
 </manifest>
