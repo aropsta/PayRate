@@ -1,4 +1,4 @@
-package com.example.arobius.payrate.java;
+package com.example.arobius.payrate.adapters;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.example.arobius.payrate.java.historyData;
 
 import java.util.ArrayList;
 

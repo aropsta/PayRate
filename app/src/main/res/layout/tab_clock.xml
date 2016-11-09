@@ -8,7 +8,7 @@
     android:background="@drawable/main_background"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.arobius.payrate.clock_fragment">
+    tools:context="com.example.arobius.payrate.fragments.clock_fragment">
 
     <RelativeLayout
         android:orientation="horizontal"

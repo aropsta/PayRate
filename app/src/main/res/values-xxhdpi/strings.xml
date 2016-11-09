@@ -41,6 +41,11 @@
     <string name="delete_entries">Delete Entries</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string-array name="tabs">
+        <item >Clock</item>
+        <item >History</item>
+    </string-array>
+
     <string name="nothingtodelete">Nothing To Delete!</string>
     <string name="noHistory">No History To Show</string>
     <string name="confirm">CONFIRM</string>

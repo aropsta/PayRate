@@ -1,4 +1,4 @@
-package com.example.arobius.payrate.java;
+package com.example.arobius.payrate.adapters;
 
 
 import android.annotation.SuppressLint;
@@ -106,7 +106,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
         TextView earnings, date, timeWorked, rate;
         CheckBox checkbox; LinearLayout linearLayout;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
             rate = (TextView) itemView.findViewById(R.id.listHourlyRate);
             timeWorked = (TextView) itemView.findViewById(R.id.listTimeWorked);

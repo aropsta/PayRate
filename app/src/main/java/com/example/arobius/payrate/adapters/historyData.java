@@ -1,4 +1,4 @@
-package com.example.arobius.payrate.java;
+package com.example.arobius.payrate.adapters;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,7 +9,7 @@ public class historyData implements Parcelable {
     private String[] date, timeWorked;
     private boolean checked;
 
-    public boolean isCheckbox() {
+    boolean isCheckbox() {
         return checkbox;
     }
 

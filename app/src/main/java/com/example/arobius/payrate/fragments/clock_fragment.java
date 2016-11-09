@@ -1,4 +1,4 @@
-package com.example.arobius.payrate;
+package com.example.arobius.payrate.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,19 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.arobius.payrate.java.databaseAdapter;
-
+import com.example.arobius.payrate.R;
+import com.example.arobius.payrate.adapters.databaseAdapter;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.Executors;
@@ -73,34 +70,29 @@ public class clock_fragment extends Fragment {
         centiseconds = 0; seconds = 0; minutes = 0;hours = 0;clockNotFull = true;savable = false;timerRunning = false;startMS = 0;endMS = 0;elapsed = 0;
         msEarnings = new BigDecimal(0);earnings = new BigDecimal(0);sixty = new BigDecimal(60);ten = new BigDecimal(10);
 
-       /* if (savedInstanceState != null) {
 
-            hours = savedInstanceState.getInt("hours");
-            minutes = savedInstanceState.getInt("minutes");
-            seconds = savedInstanceState.getInt("seconds");
-            centiseconds = savedInstanceState.getInt("centiseconds");
-            startMS = savedInstanceState.getLong("startMS");
-
-            earnings = BigDecimal.valueOf(savedInstanceState.getDouble("earnings"));
-            earningsLabel.setText(getString(R.string.currencySign) + " " + b.format(earnings));
-
-            centiSecondsIMG.setImageDrawable(drawables[centiseconds * 10]);
-            secondsIMG.setImageDrawable(drawables[seconds]);
-            minutesIMG.setImageDrawable(drawables[minutes]);
-            hoursIMG.setImageDrawable(drawables[hours]);
-
-
-            earningsLabel.setText(getString(R.string.currencySign) + " " + b.format(earnings));
-            rate.setText(savedInstanceState.getString("rate"));
-            savedInstanceState=null;
-
-        }*/
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.tab_clock, container, false);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt("hours", hours);
+        outState.putInt("minutes", minutes);
+        outState.putInt("seconds", seconds);
+        outState.putInt("centiseconds", centiseconds);
+
+        outState.putString("rate", String.valueOf(rate.getText()));
+        outState.putDouble("earnings", earnings.doubleValue());
+
+        outState.putLong("startMS", startMS);
+        outState.putLong("endMS", endMS);
+
+        super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -148,6 +140,28 @@ public class clock_fragment extends Fragment {
 
         rate = (TextView) view.findViewById(R.id.rate);
         earningsLabel = (TextView) view.findViewById(R.id.earningsLabel);
+
+        if (savedInstanceState != null) {
+
+            hours = savedInstanceState.getInt("hours");
+            minutes = savedInstanceState.getInt("minutes");
+            seconds = savedInstanceState.getInt("seconds");
+            centiseconds = savedInstanceState.getInt("centiseconds");
+            startMS = savedInstanceState.getLong("startMS");
+
+            earnings = BigDecimal.valueOf(savedInstanceState.getDouble("earnings"));
+            earningsLabel.setText(getString(R.string.currencySign) + " " + b.format(earnings));
+
+            centiSecondsIMG.setImageDrawable(drawables[centiseconds * 10]);
+            secondsIMG.setImageDrawable(drawables[seconds]);
+            minutesIMG.setImageDrawable(drawables[minutes]);
+            hoursIMG.setImageDrawable(drawables[hours]);
+
+
+            earningsLabel.setText(getString(R.string.currencySign) + " " + b.format(earnings));
+            rate.setText(savedInstanceState.getString("rate"));
+
+        }
     }
 
     void drawables() {
@@ -332,6 +346,10 @@ public class clock_fragment extends Fragment {
             dialog.setArguments(bundle);
             dialog.show(getFragmentManager(),"dialog");
         }
+    }
+
+    public static clock_fragment getInstance(){
+        return new clock_fragment();
     }
 
     public void startClicked() {
