@@ -14,22 +14,22 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.arobius.payrate.R;
+import com.example.arobius.payrate.Util;
 
 import java.util.ArrayList;
 
-public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyViewHolder>{
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
 
     private LayoutInflater inflater;
     private ArrayList<historyData> arrayList;
     private Button yesButton;
     private Context context;
-    private boolean selectionView;
+    Util util = new Util();
 
-   public recyclerAdapter(Context context, ArrayList<historyData> arrayList, boolean selectionView, Button yesButton) {
+    public RecyclerAdapter(Context context, ArrayList<historyData> arrayList, Button yesButton) {
         inflater = LayoutInflater.from(context);
-        this.arrayList = arrayList;
+        update(arrayList);
         this.context = context;
-        this.selectionView = selectionView;
         this.yesButton = yesButton;
     }
 
@@ -72,7 +72,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
             params.addRule(RelativeLayout.ALIGN_START);
             params.addRule(RelativeLayout.ALIGN_END);
 
-            params.setMargins(0, 0, dpToPx(50), 0);
+            params.setMargins(0, 0, util.dpToPx(context, 50), 0);
             holder.earnings.setLayoutParams(params);
             holder.checkbox.setChecked(arrayList.get(position).isChecked());
         }else{
@@ -82,7 +82,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
             params.addRule(RelativeLayout.CENTER_VERTICAL);
             params.addRule(RelativeLayout.ALIGN_END);
             params.addRule(RelativeLayout.ALIGN_START);
-            params.setMargins(0, 0, dpToPx(20), 0);
+            params.setMargins(0, 0, util.dpToPx(context, 50), 0);
             holder.earnings.setLayoutParams(params);
             holder.checkbox.setChecked(arrayList.get(position).isChecked());
         }
@@ -93,12 +93,12 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
         return arrayList.size();
     }
 
-    private int dpToPx(int dp){
-
-        final double scale = context.getResources().getDisplayMetrics().density;
-
-        return (int)(dp * scale + 0.5f);
+    private void update(ArrayList<historyData> arrayList){
+       this.arrayList = arrayList;
+       notifyItemInserted(arrayList.size());
     }
+
+
 
 
     class MyViewHolder extends RecyclerView.ViewHolder{
